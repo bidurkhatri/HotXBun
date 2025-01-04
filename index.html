@@ -4,18 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hot Cross Bun Recipe Calculator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Hot Cross Bun Recipe Calculator</h1>
     <label for="bags">Enter Number of Bags:</label>
-    <input type="number" id="bags" step="0.01" />
+    <input type="number" id="bags" step="0.01" placeholder="e.g., 0.36" />
     <button onclick="calculate()">Calculate</button>
 
     <h3>Ingredients:</h3>
-    <p>Premix (kg): <span id="premix"></span></p>
-    <p>Yeast (g): <span id="yeast"></span></p>
-    <p>Water (L): <span id="water"></span></p>
-    <p>Fruit Mix (kg): <span id="fruitmix"></span></p>
+    <p>Premix (kg): <span id="premix">-</span></p>
+    <p>Yeast (g): <span id="yeast">-</span></p>
+    <p>Water (L): <span id="water">-</span></p>
+    <p>Fruit Mix (kg): <span id="fruitmix">-</span></p>
+
+    <footer>
+        <p>Created for 0754 Bakery team for quick calculations by Bidur.</p>
+    </footer>
 
     <script>
         function calculate() {
