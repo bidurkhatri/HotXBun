@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hot Cross Bun Recipe Calculator</title>
+</head>
+<body>
+    <h1>Hot Cross Bun Recipe Calculator</h1>
+    <label for="bags">Enter Number of Bags:</label>
+    <input type="number" id="bags" step="0.01" />
+    <button onclick="calculate()">Calculate</button>
+
+    <h3>Ingredients:</h3>
+    <p>Premix (kg): <span id="premix"></span></p>
+    <p>Yeast (g): <span id="yeast"></span></p>
+    <p>Water (L): <span id="water"></span></p>
+    <p>Fruit Mix (kg): <span id="fruitmix"></span></p>
+
+    <script>
+        function calculate() {
+            const bags = parseFloat(document.getElementById("bags").value);
+            if (!bags || bags <= 0) {
+                alert("Please enter a valid number of bags!");
+                return;
+            }
+            const premix = bags * 12.5;
+            const yeast = premix * 60;
+            const water = premix * 0.496;
+            const fruitmix = premix * 0.496;
+
+            document.getElementById("premix").innerText = premix.toFixed(2);
+            document.getElementById("yeast").innerText = yeast.toFixed(2);
+            document.getElementById("water").innerText = water.toFixed(2);
+            document.getElementById("fruitmix").innerText = fruitmix.toFixed(2);
+        }
+    </script>
+</body>
+</html>
